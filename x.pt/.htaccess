@@ -1,0 +1,15 @@
+
+   AuthType Basic
+   AuthName "Password Protected Area"
+   AuthUserFile /home/ncommerc/public_html/zie.pt/.htpassword
+   Require valid-user
+   
+<FilesMatch ".env|composer.json|composer.lock|artisan|package.json|webpack.mix.js">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>

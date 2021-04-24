@@ -1,0 +1,10 @@
+### Laravel ###
+node_modules/
+npm-debug.log
+yarn-error.log
+storage/framework/views/
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
